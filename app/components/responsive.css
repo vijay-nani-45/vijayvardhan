@@ -1,0 +1,151 @@
+/* Base responsive styles */
+@media (max-width: 1280px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 768px;
+  }
+
+  section {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 640px;
+  }
+
+  h1 {
+    font-size: 2.25rem !important;
+  }
+
+  h2 {
+    font-size: 1.75rem !important;
+  }
+
+  h3 {
+    font-size: 1.5rem !important;
+  }
+
+  .chatbot-interface {
+    width: 350px !important;
+    height: 500px !important;
+  }
+
+  .chatbot-button {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.875rem !important;
+  }
+
+  .chatbot-button span {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  h1 {
+    font-size: 1.875rem !important;
+  }
+
+  h2 {
+    font-size: 1.5rem !important;
+  }
+
+  h3 {
+    font-size: 1.25rem !important;
+  }
+
+  .chatbot-interface {
+    width: 300px !important;
+    height: 450px !important;
+    bottom: 5rem !important;
+    right: 1rem !important;
+  }
+
+  .custom-cursor {
+    display: none;
+  }
+
+  .chatbot-button {
+    bottom: 1rem !important;
+    right: 1rem !important;
+    padding: 0.5rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .chatbot-interface {
+    width: calc(100% - 2rem) !important;
+    right: 1rem !important;
+    left: 1rem !important;
+    height: 400px !important;
+  }
+
+  section {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .chatbot-button {
+    transform: scale(0.9);
+  }
+}
+
+/* Fix for mobile touch devices */
+@media (hover: none) {
+  body {
+    cursor: auto !important;
+  }
+
+  .custom-cursor {
+    display: none !important;
+  }
+
+  /* Ensure touch targets are large enough */
+  button,
+  a,
+  input,
+  .chatbot-hoverable {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Improve tap feedback */
+  button:active,
+  a:active,
+  .chatbot-hoverable:active {
+    opacity: 0.7;
+    transform: scale(0.98);
+  }
+}
+
+/* Ensure content is readable on small screens */
+@media (max-width: 320px) {
+  body {
+    font-size: 14px;
+  }
+
+  .chatbot-interface {
+    height: 350px !important;
+  }
+}
+
+/* Landscape mode adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+  .chatbot-interface {
+    height: 300px !important;
+    width: 400px !important;
+  }
+}
